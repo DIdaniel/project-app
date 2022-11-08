@@ -1,9 +1,15 @@
 import React from "react";
+import { Navbar } from "./components";
 
 function App() {
+  /** Property */
+
+  /** Function */
+
+  /** Render */
   return (
-    <div className="bg-red-100">
-      <p className="text-blue-700">HelloWORLD</p>
+    <div>
+      <Navbar />
     </div>
   );
 }
