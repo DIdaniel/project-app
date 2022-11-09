@@ -1,6 +1,7 @@
 import React from "react";
 import {
   About,
+  Contact,
   Experience,
   HeroSection,
   Navbar,
@@ -22,6 +23,7 @@ function App() {
       <About />
       <Project />
       <Experience />
+      <Contact />
     </div>
   );
 }
