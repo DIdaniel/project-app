@@ -1,5 +1,12 @@
 import React from "react";
-import { About, HeroSection, Navbar, Project, SideLink } from "./components";
+import {
+  About,
+  Experience,
+  HeroSection,
+  Navbar,
+  Project,
+  SideLink,
+} from "./components";
 
 function App() {
   /** Property */
@@ -14,6 +21,7 @@ function App() {
       <SideLink />
       <About />
       <Project />
+      <Experience />
     </div>
   );
 }
