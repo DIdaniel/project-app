@@ -1,5 +1,5 @@
 import React from "react";
-import { HeroSection, Navbar } from "./components";
+import { HeroSection, Navbar, SideLink } from "./components";
 
 function App() {
   /** Property */
@@ -11,6 +11,7 @@ function App() {
     <div>
       <Navbar />
       <HeroSection />
+      <SideLink />
     </div>
   );
 }
