@@ -35,7 +35,6 @@ export const Navbar = (props: NavbarProps) => {
   ];
 
   /** Function */
-  console.log(isNavOpen);
 
   /** Render */
   return (

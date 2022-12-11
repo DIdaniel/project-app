@@ -11,45 +11,30 @@ import NodeImg from "../../assets/project-images/node.png";
 
 interface MyProjectType {
   id: number;
+  name: string;
   image: string;
 }
 
-const myProject: MyProjectType[] = [
+const whatIuse: MyProjectType[] = [
   {
     id: 1,
+    name: "html",
     image: HtmlImg,
   },
   {
     id: 2,
+    name: "css",
     image: CssImg,
   },
   {
     id: 3,
+    name: "js",
     image: JsImg,
   },
   {
     id: 4,
+    name: "react",
     image: ReactImg,
-  },
-  {
-    id: 5,
-    image: NextJsImg,
-  },
-  {
-    id: 6,
-    image: GraphQlImg,
-  },
-  {
-    id: 7,
-    image: GithubImg,
-  },
-  {
-    id: 8,
-    image: TailwindImg,
-  },
-  {
-    id: 9,
-    image: NodeImg,
   },
 ];
 
@@ -66,25 +51,27 @@ export const Project = (props: ProjectProps) => {
   /** Render */
   return (
     <div
-      className="text-white bg-gradient-to-b from-black to-gray-800 w-full md:h-screen"
       {...others}
+      className="w-full h-screen text-white bg-gradient-to-b from-black to-gray-800 flex align-center justify-center flex-col"
     >
-      <div className="flex flex-col justify-center max-w-screen-lg p-4 mx-auto w-full h-full">
+      <div className="flex flex-col justify-center p-4 mx-auto max-w-screen-lg w-full">
         <div className="pb-8">
           <p className="inline p-2 text-4xl font-bold border-b-4 border-gray-500">
             Portfolio
           </p>
           <p className="py-6">Check out some of my work right here!</p>
         </div>
-
-        <div className="grid gap-8 px-12 md:grid-cols-3 sm:px-0 sm:grid-cols-2">
-          {myProject.map(({ id, image }) => {
+        <div className="grid grid-cols-2 gap-8 h-full md:grid-cols-4">
+          {whatIuse.map(({ id, name, image }) => {
             return (
-              <div key={id} className="shadow-md shadow-gray-600 rounded-lg">
+              <div
+                key={id}
+                className="shadow-md shadow-gray-600 rounded-lg flex flex-col justify-center align-center w-[14rem]"
+              >
                 <img
                   src={image}
-                  alt="first"
-                  className="rounded-md duration-200 hover:scale-105"
+                  alt={name}
+                  className="rounded-md p-10 duration-200 hover:scale-105"
                 />
                 <div className="flex justify-center items-center">
                   <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-105">
