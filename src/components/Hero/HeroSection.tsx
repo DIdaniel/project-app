@@ -1,6 +1,7 @@
 import React from "react";
 import Profile from "../../assets/profile.jpg";
 import HeroImage from "../../assets/code.png";
+import Avatar from "../../assets/crayonzgrim-avatar-2.png";
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 type HeroSectionProps = {
@@ -15,9 +16,12 @@ export const HeroSection = (props: HeroSectionProps) => {
 
   /** Render */
   return (
-    <div className="h-screen w-full bg-gradient-to-b from-black to-gray-800">
-      <div className="max-w-screen-lg mx-auto flex flex-col items-center justify-center h-full px-4 md:flex-row">
-        <div className="flex flex-col justify-center h-full">
+    <div
+      {...others}
+      className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
+    >
+      <div className="max-w-screen-lg h-full mx-auto flex flex-col-reverse items-center justify-center px-4 md:flex-row">
+        <div className="flex flex-col justify-center md:mr-10">
           <h2 className="text-4xl font-bold text-white sm:text-7xl">
             I am a Frontend Developer
           </h2>
@@ -38,11 +42,11 @@ export const HeroSection = (props: HeroSectionProps) => {
           </div>
         </div>
 
-        <div>
+        <div className="mb-10 p-5">
           <img
             src={HeroImage}
             alt="profile"
-            className="rounded-2xl mx-auto w-2/3 ml-7 md:w-full"
+            className="rounded-2xl md:mx-auto w-full"
           />
         </div>
       </div>

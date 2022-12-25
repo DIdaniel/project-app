@@ -10,7 +10,11 @@ export const Contact = (props: ContactProps) => {
   /** Property */
   const { ...others } = props;
 
-  const [isSent, setIsSent] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  /** Colorize */
+  const emailSendButtonNormal = `flex item-center rounded-md text-white  px-6 py-3 my-8 mx-auto hover:scale-110 duration-300 w-full bg-gradient-to-b from-cyan-500 to-blue-500`;
+  const emailSendButtonSuccess = `flex item-center rounded-md text-white  px-6 py-3 my-8 mx-auto hover:scale-110 duration-300 w-full bg-gradient-to-b from-cyan-500 to-green-500`;
 
   /** Function */
   const handleSendEmail = (
@@ -32,12 +36,12 @@ export const Contact = (props: ContactProps) => {
         );
       }
 
-      setIsSent(true);
+      setIsSuccess(true);
       setTimeout(() => {
-        setIsSent(false);
+        setIsSuccess(false);
       }, 2000);
     } catch (err) {
-      setIsSent(false);
+      setIsSuccess(false);
     }
   };
 
@@ -82,10 +86,12 @@ export const Contact = (props: ContactProps) => {
 
             <button
               type="submit"
-              className="flex item-center rounded-md text-white bg-gradient-to-b from-cyan-500 to-blue-500 px-6 py-3 my-8 mx-auto hover:scale-110 duration-300 w-full"
+              className={
+                isSuccess ? emailSendButtonSuccess : emailSendButtonNormal
+              }
             >
               <div className="flex align-center justify-center w-full">
-                {isSent ? (
+                {isSuccess ? (
                   <p>🎉 Your email has been sent successfully 🎉</p>
                 ) : (
                   <>
