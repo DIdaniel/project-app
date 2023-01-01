@@ -18,7 +18,8 @@ export const HeroSection = (props: HeroSectionProps) => {
   return (
     <div
       {...others}
-      className="h-screen w-full bg-gradient-to-b from-black to-gray-800"
+      className="h-screen w-full bg-gradient-to-b from-black to-gray-800 p-14"
+      id="home"
     >
       <div className="max-w-screen-lg h-full mx-auto flex flex-col-reverse items-center justify-center px-4 md:flex-row">
         <div className="flex flex-col justify-center md:mr-10">

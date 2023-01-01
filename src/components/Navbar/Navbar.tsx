@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { MouseEventHandler, MouseEvent, useState } from "react";
+import { Link } from "react-scroll";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 type NavbarProps = {
@@ -35,6 +36,9 @@ export const Navbar = (props: NavbarProps) => {
   ];
 
   /** Function */
+  const handleClick = (event: MouseEvent<HTMLButtonElement>) => {
+    console.log((event.target as HTMLLIElement)?.textContent);
+  };
 
   /** Render */
   return (
@@ -43,16 +47,19 @@ export const Navbar = (props: NavbarProps) => {
         <h1 className="text-2xl font-signature ml-2">DONGIL</h1>
       </div>
 
-      <ul className="hidden md:flex">
+      <div className="hidden md:flex">
         {menuLinks.map((link) => (
-          <li
+          <button
             key={link.id}
             className="px-4 text-gray-500 font-medium capitalize cursor-pointer hover:scale-105 duration-300"
+            onClick={(e) => handleClick(e)}
           >
-            {link.title}
-          </li>
+            <Link to={link.title} spy={true} smooth={true}>
+              {link.title}
+            </Link>
+          </button>
         ))}
-      </ul>
+      </div>
 
       <div className="text-gray-500 pr-4 z-10 cursor-pointer md:hidden">
         <button onClick={() => setIsNavOpen((prev) => !prev)}>

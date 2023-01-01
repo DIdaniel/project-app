@@ -80,9 +80,10 @@ export const Experience = (props: ExperienceProps) => {
   return (
     <div
       {...others}
-      className="w-full h-full bg-gradient-to-b from-gray-800 to-black"
+      className="w-full h-screen text-white bg-gradient-to-b from-gray-800 to-black flex align-center justify-center flex-col"
+      id="experience"
     >
-      <div className="flex align-center justify-center flex-col text-white p-4 mx-auto max-w-screen-lg">
+      <div className="flex align-center justify-center flex-col text-white p-4 mx-auto max-w-screen-lg w-full">
         <div>
           <p className="inline p-2 mt-10 text-4xl font-bold border-b-4 border-gray-500">
             Experience
@@ -90,7 +91,7 @@ export const Experience = (props: ExperienceProps) => {
           <p className="py-6">There are the technologies I've worked with</p>
         </div>
 
-        <div className="grid grid-cols-2 gap-8 text-center py-8 px-12 w-full sm:grid-cols-4 sm:px-0">
+        <div className="grid grid-cols-2 gap-8 text-center w-full sm:grid-cols-4 sm:px-0">
           {techs.map(({ id, image, title, style }) => (
             <div
               key={id}

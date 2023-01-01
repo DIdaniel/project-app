@@ -52,7 +52,8 @@ export const Project = (props: ProjectProps) => {
   return (
     <div
       {...others}
-      className="w-full h-screen text-white bg-gradient-to-b from-black to-gray-800 flex align-center justify-center flex-col"
+      className="w-full h-screen text-white bg-gradient-to-b from-black to-gray-800 flex align-center justify-center flex-col p-12"
+      id="portfolio"
     >
       <div className="flex flex-col justify-center p-4 mx-auto max-w-screen-lg w-full">
         <div className="pb-8">
@@ -66,7 +67,7 @@ export const Project = (props: ProjectProps) => {
             return (
               <div
                 key={id}
-                className="shadow-md shadow-gray-600 rounded-lg flex flex-col justify-center align-center w-[14rem]"
+                className="shadow-md shadow-gray-600 rounded-lg flex flex-col justify-center align-center sm:w-[14rem]"
               >
                 <img
                   src={image}

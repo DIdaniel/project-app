@@ -1,12 +1,13 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { HiOutlineMail } from "react-icons/hi";
+import { FaBloggerB } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
 
 const links = [
   {
     id: 1,
-    href: "https://linkedin.com",
+    href: "https://www.linkedin.com/in/patrick69/",
     child: (
       <>
         LinkedIn <FaLinkedin size={30} />
@@ -16,7 +17,7 @@ const links = [
   },
   {
     id: 2,
-    href: "https://github.com",
+    href: "https://github.com/DIdaniel",
     child: (
       <>
         Github <FaGithub size={30} />
@@ -25,16 +26,16 @@ const links = [
   },
   {
     id: 3,
-    href: "https://cappu159@gmail.com",
+    href: "https://patrick-f.tistory.com/",
     child: (
       <>
-        Gmail <HiOutlineMail size={30} />
+        Blog <FaBloggerB size={30} />
       </>
     ),
   },
   {
     id: 4,
-    href: "https://tistory.com",
+    href: "https://lush-viscount-141.notion.site/12c37c1f0f4d4a0888820e3eaa8b735c",
     child: (
       <>
         Resume <BsFillPersonLinesFill size={30} />
@@ -55,7 +56,7 @@ export const SideLink = (props: SideLinkProps) => {
 
   /** Render */
   return (
-    <div className="flex flex-col top-[35%] left-0 fixed" {...others}>
+    <div {...others} className="flex flex-col top-[35%] left-0 fixed">
       <ul>
         {links.map((link) => {
           const { id, child, href, style, download } = link;

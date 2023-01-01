@@ -48,8 +48,9 @@ export const Contact = (props: ContactProps) => {
   /** Render */
   return (
     <div
-      className="w-full h-screen text-white p-4 bg-gradient-to-b from-black to-gray-800"
       {...others}
+      className="w-full h-screen text-white bg-gradient-to-b from-black to-gray-800 p-12"
+      id="contact"
     >
       <div className="flex flex-col justify-center max-w-screen-lg p-4 mx-auto w-full h-full">
         <div className="pb-8">
